@@ -1,0 +1,31 @@
+.slider {
+	width: 100%;
+	height: auto;
+	position: relative;
+	&:after {
+		position: absolute;
+		background: black;
+		height: 100%;
+		left: 7px;
+		top: 7px;
+		width: 100%;
+		z-index: -1;
+		display: block;
+		content: '';
+	}
+	@media (max-width: $bp-laptop) {
+		&:after {
+			left: 5px;
+			top: 5px;
+		}
+	}
+}
+.slide {
+	width: 100%;
+	position: relative;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}

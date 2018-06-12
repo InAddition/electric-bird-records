@@ -1,0 +1,69 @@
+/**********************
+Breakpoints 
+***********************/
+
+
+$bp-xl: 1824px;
+$bp-large: 1300px;
+$bp-desktop: 1150px;
+$bp-laptop: 1000px;
+$bp-tablet: 900px;
+$bp-mobile: 650px;
+$bp-small: 550px;
+$bp-xs: 320px;
+
+
+/**********************
+Colors
+***********************/
+
+$grey: #343434;
+$dark-grey: #252525;
+$light-grey: #878787;
+$black: black;
+$light-black: #191919;
+
+/**********************
+Color Usage
+***********************/
+
+// $color-primary: $pink;
+// $color-primary-light: $light-blue;
+// $color-primary-dark: $dark-blue;
+// $color-secondary: $pink;
+// $color-secondary-light: $light-pink;
+// $color-secondary-dark: $dark-pink;
+// $color-background: $black;
+// $color-background-light: $light-black;
+
+/**********************
+Font Family
+***********************/
+
+$font-family: 'Saira Condensed', sans-serif;
+
+/**********************
+Font Weights
+***********************/
+
+$font-regular: 400;
+$font-bold: 700;
+
+/**********************
+Font Size
+***********************/
+
+$font-size-micro: 14px;
+$font-size-small: 16px;
+$font-size-base: em(20);
+$font-size-medium: em(24);
+$font-size-regular: em(32);
+$font-size-large: em(55);
+$font-size-xl: em(65);
+
+/**********************
+Letter Spacing
+***********************/
+
+$letter-spacing-wide: em(.75);
+$letter-spacing-x-wide: em(1.5);

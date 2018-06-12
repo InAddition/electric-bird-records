@@ -1,0 +1,241 @@
+.home-news-container {
+	margin-top: em(65);
+	@media (max-width: $bp-tablet) {
+		margin-top: em(45);
+	}
+}
+.news-grid {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	&:after {
+		content: '';
+		flex-grow: 1;
+		min-width: 23%;
+		max-width: 46%;
+		display: block;
+	}
+	@media (max-width: $bp-mobile) {
+		&:after {
+			display: none;
+		}
+	}
+}
+.news-container .news-grid {
+	@media (max-width: $bp-tablet) {
+		display: flex;
+	}
+	@media (max-width: $bp-mobile) {
+		display: block;
+	}
+}
+.news-item {
+	width: 23%;
+	background: $black;
+	position: relative;
+	text-align: right;
+	margin-bottom: 1%;
+	a {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 5;
+	}
+	&:after {
+		position: absolute;
+		background: black;
+		height: 100%;
+		left: 7px;
+		top: 7px;
+		width: 100%;
+		z-index: -1;
+		display: block;
+		content: '';
+	}
+	&:hover {
+		span {
+			background-color: black;
+			color: white;
+			&:before {
+				background: black;
+			}
+		}
+	}
+	h2 {
+		height: 100%;
+		display: flex;
+		width: 100%;
+		align-items: flex-end;
+		justify-content: flex-end;
+		position: absolute;
+		z-index: 3;
+		overflow: hidden;
+		span {
+			padding: em(3) em(15) em(3) em(5);
+			font-size: em(18);
+			color: black;
+			margin: 0;
+			text-align: right;
+			line-height: 1;
+			background: white;
+			text-transform: uppercase;
+			font-weight: $font-regular;
+			transform: translateY(-20px);
+			position: relative;
+			transition: all .3s;
+			max-width: 80%;
+			&:before {
+				position: absolute;
+				background: white;
+				transform: skewX(-19deg);
+				height: 102%;
+				left: -15px;
+				width: 200%;
+				z-index: -1;
+				display: block;
+				content: '';
+				top:0;
+				transition: all .3s;
+			}
+		}
+	}
+	@media (max-width: $bp-laptop) {
+		width: 48%;
+		margin-bottom: 15px;
+	}
+	@media (max-width: $bp-mobile) {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		font-size: 90%;
+		&:after {
+			left: 5px;
+			top: 5px;
+		}
+	}
+}
+.news-container .news-item {
+	margin: 0 0.5%;
+	margin-bottom: 15px;
+	@media (max-width: $bp-laptop) {
+		margin: 0 1%;
+		width: 48%;
+	}
+	@media (max-width: $bp-tablet) {
+		width: 48% !important;
+	}
+	@media (max-width: $bp-mobile) {
+		width: 100% !important;
+		margin: 0 0 15px;
+	}
+}
+.news-date {
+	padding: 10px;
+	background: $black;
+	text-align: left;
+	font-size: em(16);
+	color: white;
+}
+.news-thumb {
+	width: 100%;
+	position: relative;
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	// &:before {
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	margin: auto;
+	// 	position: absolute;
+	// 	content: '';
+	// 	z-index: 2;
+	// 	background: $black;
+	// 	opacity: 0.5;
+	// 	transition: opacity .3s;
+	// }
+	.read-more {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+}
+
+.featured-news {
+	width: 100%;
+	margin-bottom: 50px;
+	h2 {
+		height: 100%;
+		display: flex;
+		width: 100%;
+		align-items: flex-end;
+		justify-content: flex-end;
+		position: absolute;
+		z-index: 3;
+		overflow: hidden;
+		span {
+			padding: em(6) em(40) em(6) em(10);
+			font-size: $font-size-regular;
+			transform: translateY(-40px);
+			&:before {
+				position: absolute;
+				background: white;
+				transform: skewX(-19deg);
+				height: 101%;
+				left: -20px;
+				width: 200%;
+				z-index: -1;
+				display: block;
+				content: '';
+				top:0;
+				transition: all .3s;
+			}
+		}
+	}
+	@media (max-width: $bp-laptop) {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		h2 span {
+			font-size: $font-size-medium;
+			padding: em(3) em(20) em(3) em(5);
+			transform: translateY(-20px);
+			&:before {
+				left: -10px;
+			}
+		}
+	}
+	@media (max-width: $bp-mobile) {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		font-size: 90%;
+		h2 span {
+			font-size: $font-size-base;
+			padding: em(3) em(20) em(3) em(5);
+			transform: translateY(-20px);
+			&:before {
+				left: -10px;
+			}
+		}
+		&:after {
+			left: 5px;
+			top: 5px;
+		}
+	}
+}

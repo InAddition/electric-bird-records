@@ -1,0 +1,23 @@
+.twitter-container {
+	margin-top: em(55);
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	@media (max-width: $bp-tablet) {
+		margin-top: em(45);
+		display: block;
+	}
+}
+.twitter {
+	width: 65%;
+	@media (max-width: $bp-laptop) {
+		width: 100%;
+	}
+}
+.tweet {
+	text-align: center;
+	font-size: $font-size-medium;
+	@media (max-width: $bp-tablet) {
+		font-size: $font-size-base;
+	}
+}
